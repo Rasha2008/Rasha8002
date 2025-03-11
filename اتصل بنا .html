@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>منتجع هول إن ون  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <style>
+         @media (max-width: 600px) {
+            .hover-image {
+                max-width: 100%; /* اجعل الحد الأقصى للعرض 100% على الشاشات الصغيرة */
+            }
+        }
+        /* قسم الصورة الخلفية */
+.hero {
+    background-image: url('اتصل بنا.png'); /* خلفية الصورة */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 18px;
+            position: relative;
+            bottom: 0px;
+            width: 100%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <header>
+        <a href="index.html">
+            <img id="myImage" src="شعار 2.png" alt="شعار المنتجع هول ان ون     " onmouseover="readAltText('myImage')" title="انقر على الشعار للعودة الى الصفحة الرئيسيةلموقع منتجع هول ان ون للجولف ">
+        </a>
+        <h1 style="display: flex; justify-content: center; align-items: center; height: 0vh; color: white;">Hole in One Golf Resort </h1>
+    </header>
+
+    <nav>
+        <!-- زر الهمبرغر -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- قائمة التنقل -->
+        <ul id="navMenu">
+         <li> <a href="احجز الان .html">الحجوزات</a></li>
+            <li><a href="اتصل بنا .html">اتصل بنا </a></li>
+           <li> <a href="المرافق .html"> المرافق</a></li>
+            <li><a href="الحزم .html">الحزم</a></li>
+           <li> <a href="من نحن .html">من نحن؟</a></li>
+           <li> <a href="index.html">الرئيسية</a></li>
+
+            
+        </ul>
+    </nav>
+    <section class="hero">
+    <div>
+        <form action="test_pag.php" method="post" id="contactForm">
+            <label>الاسم</label><br>
+            <input type="text" placeholder="الاسم" name="name" required><br>
+            <label>البريد الإلكتروني</label><br>
+            <input type="text" placeholder="البريد الإلكتروني" name="email" required><br>
+            <label>رسالتك</label><br>
+            <textarea name="message" placeholder="اكتب رسالتك هنا..." required></textarea><br>
+            <button type="submit">إرسال</button>
+        </form>
+    </div>
+</section>
+
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            var name = document.querySelector('input[name="name"]').value;
+            var email = document.querySelector('input[name="email"]').value;
+            if (name === "" || email === "") {
+                alert("يرجى ملء جميع الحقول.");
+                e.preventDefault();
+            } else {
+                alert("تم إرسال رسالتك بنجاح!");
+            }
+        });
+    </script>
+    
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025 | شركة Hole in One Golf Resort</p>
+        <div class="social-links">
+            <a href="https://www.whatsapp.com/?lang=ar_AR" target="_blank">
+                <img src="واتس.png" alt="واتساب">
+            </a>
+            <a href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr#" target="_blank">
+                <img src="فيس.png" alt="فيسبوك">
+            </a>
+        </div>
+        <p>التاريخ والوقت الحالي: <span id="dateTime"></span></p>
+    </footer>
+    
+</body>
+</html>

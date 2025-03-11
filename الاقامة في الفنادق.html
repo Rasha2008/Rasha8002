@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>منتجع هول إن ون  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .intro {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            text-align: right;
+        }
+        .intro h2 {
+            font-size: 2.5rem;
+            color: #0e5232;
+            margin-bottom: 20px;
+        }
+        .intro p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+       
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img id="myImage" src="شعار 2.png" alt="شعار المنتجع هول ان ون     " onmouseover="readAltText('myImage')" title="انقر على الشعار للعودة الى الصفحة الرئيسيةلموقع منتجع هول ان ون للجولف ">
+        </a>
+        <h1 style="display: flex; justify-content: center; align-items: center; height: 0vh; color: white;">Hole in One Golf Resort </h1>
+    </header>
+
+    
+    <nav>
+        <!-- زر الهمبرغر -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- قائمة التنقل -->
+        <ul id="navMenu">
+         <li> <a href="احجز الان .html">الحجوزات</a></li>
+            <li><a href="اتصل بنا .html">اتصل بنا </a></li>
+           <li> <a href="المرافق .html"> المرافق</a></li>
+            <li><a href="الحزم .html">الحزم</a></li>
+           <li> <a href="من نحن .html">من نحن؟</a></li>
+           <li> <a href="index.html">الرئيسية</a></li>
+
+            
+        </ul>
+    </nav>
+
+<div class="container">
+    <!-- نص وصفي -->
+    <div class="intro">
+        <h2>فنادقنا الفاخرة</h2>
+        <p>
+            يوفر منتجع هول إن ون مجموعة من الفنادق الفاخرة التي تلبي جميع احتياجات الضيوف. سواء كنت تبحث عن غرفة فاخرة بإطلالة على البحر أو جناح عائلي واسع، لدينا ما يناسبك. تتميز غرفنا بتصميم عصري وخدمات عالية الجودة لضمان إقامة مريحة ولا تُنسى.
+        </p>
+        <p>
+            بالإضافة إلى الغرف الفاخرة، نوفر مرافق مثل حمامات السباحة، صالات اللياقة البدنية، ومراكز العلاج التجميلي. كل ذلك في مكان واحد لتجربة إقامة استثنائية.
+        </p>
+    </div>
+
+    <!-- معرض الصور -->
+    <div class="gallery">
+        <img src="غرفة فاخرة.jpeg" alt="غرفة فاخرة">
+        <img src="جناح عائلي.jpeg" alt="جناح عائلي">
+        <img src="حمام السباحة.jpeg" alt="حمام سباحة">
+        <img src="صالة الللياقة البدنية.jpeg" alt="صالة لياقة بدنية">
+        <img src="سبا.jpeg" alt="مركز سبا">
+        <img src="اطلالة.jpeg" alt="إطلالة على البحر">
+    </div>
+</div>
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2025 | شركة Hole in One Golf Resort</p>
+    <div class="social-links">
+        <a href="https://www.whatsapp.com/?lang=ar_AR" target="_blank">
+            <img src="واتس.png" alt="واتساب">
+        </a>
+        <a href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr#" target="_blank">
+            <img src="فيس.png" alt="فيسبوك">
+        </a>
+    </div>
+    <p>التاريخ والوقت الحالي: <span id="dateTime"></span></p>
+</footer>
+
+</body>
+</html>

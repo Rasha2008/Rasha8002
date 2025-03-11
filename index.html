@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>منتجع هول إن ون  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #189b3f; /* لون الخلفية */
+    color: white; /* لون النص */
+    text-decoration: none; /* إزالة الخط التحتي */
+    border-radius: 5px; /* زوايا مدورة */
+}
+
+
+      /* شريط التنقل */
+ nav {
+    display: flex;
+justify-content: center;
+align-items: center;
+background-color: #71c59b;
+padding: 15px;
+position: sticky;
+top: 0;
+z-index: 1000;
+margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    color: white;
+text-decoration: none;
+font-weight: bold;
+font-size: 18px;
+padding: 10px;
+transition: 0.3s;
+text-align: right;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #0e5232;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #e3e7e5;
+    border-radius: 5px;
+}
+        /* تنسيق واجهة البحث */
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: hsl(0, 15%, 90%);
+            border-radius: 25px;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+
+        .search-container:hover {
+            background-color: #fffdfd;
+        }
+
+        .search-input {
+            border: none;
+            outline: none;
+            font-size: 16px;
+            padding: 5px;
+            background: transparent;
+            color: #201e1e;
+            width: 150px; /* عرض ثابت لحقل البحث */
+        }
+
+        .search-input::placeholder {
+            color: #222020;
+        }
+
+        .search-icon {
+            font-size: 18px;
+            color: #181717;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .search-icon:hover {
+            color: #587772;
+        }
+
+        /* زر الهمبرغر */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #1c7a4e;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #71c59b;
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <script>
+        window.onload = function() {
+            if (!localStorage.getItem('welcomeMessageShown')) {
+                alert("مرحبا بكم في شركة Hole in One Golf Resort");
+                localStorage.setItem('welcomeMessageShown', true);
+            }
+        };
+    </script>
+
+    <header>
+        <a href="index.html">
+            <img id="myImage" src="شعار 2.png" alt="شعار المنتجع هول ان ون     " onmouseover="readAltText('myImage')" title="انقر على الشعار للعودة الى الصفحة الرئيسيةلموقع منتجع هول ان ون للجولف ">
+        </a>
+        <h1 style="display: flex; justify-content: center; align-items: center; height: 0vh; color: white;">Hole in One Golf Resort</h1>
+    </header>
+
+    <nav>
+        <!-- زر الهمبرغر -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- قائمة التنقل -->
+        <ul id="navMenu">
+         <li> <a href="احجز الان .html">الحجوزات</a></li>
+            <li><a href="اتصل بنا .html">اتصل بنا </a></li>
+           <li> <a href="المرافق .html"> المرافق</a></li>
+            <li><a href="الحزم .html">الحزم</a></li>
+           <li> <a href="من نحن .html">من نحن؟</a></li>
+           <li> <a href="index.html">الرئيسية</a></li>
+
+            
+        </ul>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="ابحث...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+    </nav>
+</header>
+
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="فيديو شركة ناشئة تحديثات الفربق نمط رسوم ثنائية الأبعاد أزرق داكن وأخضر.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-content">
+            <h1>مرحبًا بكم في منتجع هول إن ون للجولف</h1>
+            <p>استمتع بتجربة فريدة من نوعها في واحدة من أفضل ملاعب الجولف في العالم.</p>
+            <p class="subtext">اكتشف المرافق الفاخرة، الحزم المميزة، وملاعبنا العالمية.</p>
+            <a href="احجز الان .html" class="cta-button">احجز الآن</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025 | شركة Hole in One Golf Resort</p>
+        <div class="social-links">
+            <a href="https://www.whatsapp.com/?lang=ar_AR" target="_blank">
+                <img src="واتس.png" alt="واتساب">
+            </a>
+            <a href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr#" target="_blank">
+                <img src="فيس.png" alt="فيسبوك">
+            </a>
+
+        </div>
+        <p>عدد الزيارات: <span id="visitCount">0</span></p>        <p>التاريخ والوقت الحالي: <span id="dateTime"></span></p>
+    </footer>
+
+    <script>
+        function updateDateTime() {
+            document.getElementById("dateTime").innerText = new Date().toLocaleString("ar-EG");
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    
+        if (localStorage.getItem("visitCount")) {
+            let count = parseInt(localStorage.getItem("visitCount")) + 1;
+            localStorage.setItem("visitCount", count);
+            document.getElementById("visitCount").innerText = count;
+        } else {
+            localStorage.setItem("visitCount", 1);
+            document.getElementById("visitCount").innerText = 1;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>منتجع هول إن ون  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .activity {
+            background: #0e5232;
+            margin: 40px 0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .activity:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .activity img {
+            width: 60%; /* عرض الصورة بنسبة 100% من المساحة المتاحة */
+            height: 300px; /* ارتفاع ثابت للصور */
+            object-fit: cover; /* الحفاظ على تناسق الصورة دون تشويه */
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        .activity img:hover {
+            transform: scale(1.05);
+        }
+        .activity h2 {
+            font-size: 2rem;
+            color: #f8f8f8;
+            margin: 15px 0;
+        }
+        .activity p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #dad4d4;
+        }
+    </style>
+</head>
+<body>
+
+</head>
+<body>
+    
+    <header>
+        <a href="index.html">
+            <img id="myImage" src="شعار 2.png" alt="شعار المنتجع هول ان ون     " onmouseover="readAltText('myImage')" title="انقر على الشعار للعودة الى الصفحة الرئيسيةلموقع منتجع هول ان ون للجولف ">
+        </a>
+        <h1 style="display: flex; justify-content: center; align-items: center; height: 0vh; color: white;">Hole in One Golf Resort </h1>
+    </header>
+
+    
+    <nav>
+        <!-- زر الهمبرغر -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- قائمة التنقل -->
+        <ul id="navMenu">
+         <li> <a href="احجز الان .html">الحجوزات</a></li>
+            <li><a href="اتصل بنا .html">اتصل بنا </a></li>
+           <li> <a href="المرافق .html"> المرافق</a></li>
+            <li><a href="الحزم .html">الحزم</a></li>
+           <li> <a href="من نحن .html">من نحن؟</a></li>
+           <li> <a href="index.html">الرئيسية</a></li>
+
+            
+        </ul>
+    </nav>
+
+<div class="container">
+    <!-- ساحة تدريب مضاءة بالأنوار الكاشفة -->
+    <div class="activity">
+        <img src="ساحة تدريب مضاءة بالأنوار الكاشفة للجولف.png" alt="ساحة تدريب مضاءة بالأنوار الكاشفة">
+        <h2>ساحة تدريب مضاءة بالأنوار الكاشفة</h2>
+        <p>
+            تمتع بتجربة تدريب فريدة في ساحتنا المخصصة للتدريب، والتي تتميز بإضاءة كاشفة تسمح لك بالتدرب ليلاً ونهارًا. سواء كنت مبتدئًا أو محترفًا، ستجد كل ما تحتاجه لتحسين مهاراتك.
+        </p>
+    </div>
+
+    <!-- دروس الجولف -->
+    <div class="activity">
+        <img src="دروس الجولف.jpeg" alt="دروس الجولف">
+        <h2>دروس الجولف</h2>
+        <p>
+            انضم إلى دروس الجولف التي يقدمها أفضل المدربين المحترفين. سواء كنت تتعلم لأول مرة أو تريد تحسين مهاراتك، لدينا برامج تدريبية تناسب جميع المستويات.
+        </p>
+    </div>
+
+    <!-- التدريب الرقمي -->
+    <div class="activity">
+        <img src="تدريب رقمي.png" alt="التدريب الرقمي">
+        <h2>التدريب الرقمي</h2>
+        <p>
+            استفد من أحدث تقنيات التدريب الرقمي لتحليل أدائك وتحسينه. نستخدم أجهزة متطورة لتتبع حركاتك وتقديم نصائح فورية لتحقيق أفضل النتائج.
+        </p>
+    </div>
+
+    <!-- خدمة المساعدة على حمل أدوات الجولف -->
+    <div class="activity">
+        <img src="حمل ادوات الجولف.png" alt="خدمة المساعدة على حمل أدوات الجولف">
+        <h2>خدمة المساعدة على حمل أدوات الجولف</h2>
+        <p>
+            وفر عناء حمل أدوات الجولف مع خدمتنا المميزة. فريقنا المتخصص سيكون دائمًا بجانبك لتقديم المساعدة ونقل أدواتك بأمان وسهولة.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2025 | شركة Hole in One Golf Resort</p>
+    <div class="social-links">
+        <a href="https://www.whatsapp.com/?lang=ar_AR" target="_blank">
+            <img src="واتس.png" alt="واتساب">
+        </a>
+        <a href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr#" target="_blank">
+            <img src="فيس.png" alt="فيسبوك">
+        </a>
+    </div>
+    <p>التاريخ والوقت الحالي: <span id="dateTime"></span></p>
+</footer>
+
+</body>
+</html>

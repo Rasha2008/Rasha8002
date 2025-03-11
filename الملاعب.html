@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>منتجع هول إن ون  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        
+        h1 {
+            color: #0e5232;
+            text-align: center; /* العنوان في الوسط */
+            margin-top: 20px;
+        }
+        .golf-course {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #0e5232;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: right; /* النص داخل الأقسام على الجهة اليمين */
+        }
+        .golf-course img {
+            width: 100%; /* جعل الصور بنفس العرض */
+            height: 200px; /* جعل الصور بنفس الارتفاع */
+            object-fit: cover; /* لجعل الصور تتكيف مع الحجم دون تشويه */
+            border-radius: 10px;
+            transition: transform 0.3s ease; /* إضافة تأثير عند التمرير */
+        }
+        .golf-course img:hover {
+            transform: scale(1.05); /* تكبير الصورة قليلاً عند التمرير */
+        }
+        .golf-course p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #f5eeee;
+            margin-top: 10px;
+        }
+       
+         /* تخصيص شكل زر التشغيل ليشبه كرة الجولف */
+         .golf-ball {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            border: 2px solid #2e2d2d;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #0e5232;
+        }
+
+        .golf-ball::before {
+            content: "▶";
+        }
+
+        .golf-ball.playing::before {
+            content: "⏸";
+        }
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+        <img id="myImage" src="شعار 2.png" alt="شعار المنتجع هول ان ون     " onmouseover="readAltText('myImage')" title="انقر على الشعار للعودة الى الصفحة الرئيسيةلموقع منتجع هول ان ون للجولف ">
+    </a>
+    <h1 style="display: flex; justify-content: center; align-items: center; height: 0vh; color: white;">Hole in One Golf Resort </h1>
+</header>
+
+
+<nav>
+    <!-- زر الهمبرغر -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- قائمة التنقل -->
+    <ul id="navMenu">
+     <li> <a href="احجز الان .html">الحجوزات</a></li>
+        <li><a href="اتصل بنا .html">اتصل بنا </a></li>
+       <li> <a href="المرافق .html"> المرافق</a></li>
+        <li><a href="الحزم .html">الحزم</a></li>
+       <li> <a href="من نحن .html">من نحن؟</a></li>
+       <li> <a href="index.html">الرئيسية</a></li>
+
+        
+    </ul>
+</nav>
+
+    <h1>ملاعب الجولف الشهيرة</h1>
+
+    <div class="golf-course">
+        <img src="سي فيو 1.jpeg" alt="ملعب سي فيو">
+        <p><strong>ملعب سي فيو</strong><br>
+        ملعب سي فيو هو واحد من أشهر ملاعب الجولف في العالم، يتميز بإطلالات خلابة وتصميم مبتكر. يقع في منطقة جبلية، مما يوفر تجربة فريدة للاعبين.</p>
+    </div>
+
+    <div class="golf-course">
+        <img src="3.jpeg" alt="ملعب الجولف الثاني">
+        <p><strong>ملعب الجولف الثاني</strong><br>
+        هذا الملعب يتميز بمساحات خضراء واسعة وتحديات متنوعة للاعبين. تم تصميمه ليلائم جميع المستويات، من المبتدئين إلى المحترفين.</p>
+    </div>
+
+    <div class="golf-course">
+        <img src="2.jpeg" alt="ملعب الجولف الثالث">
+        <p><strong>ملعب الجولف الثالث</strong><br>
+        ملعب الجولف الثالث يعتبر تحفة معمارية، حيث يجمع بين الطبيعة الخلابة وتصميم عصري. يتميز بوجود بحيرات صناعية وممرات متعرجة.</p>
+    <!-- عنصر الصوت -->
+  <audio id="audio" controls style="display: none;">
+    <source src="What-is-golf_-_-ما-هي-لعبة-الجولف؟.mp3" type="audio/mpeg">
+    متصفحك لا يدعم عنصر الصوت.
+</audio>
+
+<!-- زر التشغيل المخصص -->
+<div id="golfBall" class="golf-ball" onclick="toggleAudio()"></div>
+
+    </div>
+
+  
+<script>
+    const audio = document.getElementById('audio');
+    const golfBall = document.getElementById('golfBall');
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+            golfBall.classList.add('playing');
+        } else {
+            audio.pause();
+            golfBall.classList.remove('playing');
+        }
+    }
+</script>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025 | شركة Hole in One Golf Resort</p>
+        <div class="social-links">
+            <a href="https://www.whatsapp.com/?lang=ar_AR" target="_blank">
+                <img src="واتس.png" alt="واتساب">
+            </a>
+            <a href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr#" target="_blank">
+                <img src="فيس.png" alt="فيسبوك">
+            </a>
+        </div>
+        <p>التاريخ والوقت الحالي: <span id="dateTime"></span></p>
+    </footer>
+</body>
+</html>

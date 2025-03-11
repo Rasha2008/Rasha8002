@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>منتجع هول إن ون  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img id="myImage" src="شعار 2.png" alt="شعار المنتجع هول ان ون     " onmouseover="readAltText('myImage')" title="انقر على الشعار للعودة الى الصفحة الرئيسيةلموقع منتجع هول ان ون للجولف ">
+        </a>
+        <h1 style="display: flex; justify-content: center; align-items: center; height: 0vh; color: white;">Hole in One Golf Resort </h1>
+    </header>
+
+    
+    <nav>
+        <!-- زر الهمبرغر -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- قائمة التنقل -->
+        <ul id="navMenu">
+         <li> <a href="احجز الان .html">الحجوزات</a></li>
+            <li><a href="اتصل بنا .html">اتصل بنا </a></li>
+           <li> <a href="المرافق .html"> المرافق</a></li>
+            <li><a href="الحزم .html">الحزم</a></li>
+           <li> <a href="من نحن .html">من نحن؟</a></li>
+           <li> <a href="index.html">الرئيسية</a></li>
+
+            
+        </ul>
+    </nav>
+
+  <!-- قسم المرافق  -->
+<section class="services">
+        <!-- مرفق 1 -->
+    <div class="service">
+        <img src="الاقامة في الفنادق 1.jpg" alt="  الاقامة في الفنادق " onclick="navigateTo('الاقامة في الفنادق.html ') "onmousemove="this.src='الاقامة بالفنادق 2.jpeg'" 
+        onmouseout="this.src='الاقامة في الفنادق 1.jpg'" 
+        class="hover-image" >
+        <h3>الاقامة في الفنادق   </h3>
+    </div>
+
+    <!-- مرفق 2 -->
+    <div class="service">
+        <img src="3.jpeg" alt="النوادي  " onclick="navigateTo('النوادي.html')" onmousemove="this.src='اللياقة البدنية 1.avif'" 
+        onmouseout="this.src='3.jpeg'" 
+        class="hover-image" >
+        <h3>النوادي  </h3>
+    </div>
+
+    <!-- مرفق 3 -->
+    <div class="service">
+        <img src="جولف.jpeg" alt="ملاعب جولف وايضا ملعب “سي فيو” الشهير " onclick="navigateTo('الملاعب.html')"onmousemove="this.src='سي فيو.jpeg'" 
+        onmouseout="this.src='جولف.jpeg'" 
+        class="hover-image" >
+        <h3>  ملاعب جولف وايضا ملعب “سي فيو” الشهير </h3>
+    </div>
+
+    <!-- مرفق 4 -->
+    <div class="service">
+        <img src="سيارة.png" alt="أنشطة اخرى " onclick="navigateTo('انشطة اخرى.html')"onmousemove="this.src='ساحة تدريب.avif'" 
+        onmouseout="this.src='  سيارة.png'" 
+        class="hover-image" >
+        <h3>  أنشطة اخرى   </h3>
+    </div>
+
+    <!-- مرفق 5 -->
+    <div class="service">
+        <img src="متجر.png" alt="متجر المحترفين    " onclick="navigateTo('متجر للمحترفين .html')"onmousemove="this.src='معدات.png'" 
+        onmouseout="this.src=' متجر.png'" 
+        class="hover-image" >
+        <h3>متجر المحترفين</h3>
+    </div>
+
+    <!-- مرفق 6 -->
+    <div class="service">
+        <img src="مطعم.jpg" alt="المطاعم والمقاهي" onclick="navigateTo('المطاعم والمقاهي.html')"onmousemove="this.src='مقهى.jpg'" 
+        onmouseout="this.src='مطعم.jpg'" 
+        class="hover-image" >
+        <h3>المطاعم والمقاهي</h3>
+    </div>
+</section>
+
+<script>
+    // دالة للانتقال إلى صفحة الخدمة
+    function navigateTo(page) {
+        window.location.href = page;
+    }
+</script>
+
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2025 | شركة Hole in One Golf Resort</p>
+    <div class="social-links">
+        <a href="https://www.whatsapp.com/?lang=ar_AR" target="_blank">
+            <img src="واتس.png" alt="واتساب">
+        </a>
+        <a href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr#" target="_blank">
+            <img src="فيس.png" alt="فيسبوك">
+        </a>
+    </div>
+    <p>التاريخ والوقت الحالي: <span id="dateTime"></span></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>منتجع هول إن ون  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href=".css">
+    <script src="script.js"></script>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* لتوزيع العناصر */
+            background-color: #0e5232;
+            padding: 10px 20px;
+            width: 100%; /* لجعل الهيدر يغطي العرض بالكامل */
+            box-sizing: border-box; /* لجعل الحشو لا يزيد العرض */
+            position: relative; /* لتحديد موقع العنوان */
+        }
+
+        /* تنسيق الشعار */
+        header img {
+            height: 80px; /* حجم الشعار */
+            width: auto;
+        }
+
+        /* تنسيق العنوان */
+        header h1 {
+            margin: 0; /* إزالة الهوامش الافتراضية */
+            color: white; /* لون النص */
+            font-size: 2rem; /* حجم الخط */
+            position: absolute; /* وضع العنوان بشكل مطلق */
+            left: 50%; /* نقله إلى منتصف الصفحة */
+            transform: translateX(-50%); /* تعديل المركز */
+        }
+
+ /* شريط التنقل */
+ nav {
+    display: flex;
+justify-content: center;
+align-items: center;
+background-color: #71c59b;
+padding: 15px;
+position: sticky;
+top: 0;
+z-index: 1000;
+margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    color: white;
+text-decoration: none;
+font-weight: bold;
+font-size: 18px;
+padding: 10px;
+transition: 0.3s;
+text-align: right;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #0e5232;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #e3e7e5;
+    border-radius: 5px;
+}
+
+/* زر الهمبرغر */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #1c7a4e;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #71c59b;
+        position: absolute;
+        top: 60px;
+        right: 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+        /* قسم الحجز */
+        .booking {
+            padding: 60px 40px; /* زيادة المسافات الداخلية */
+            background-color: #0e5232;
+            max-width: 800px; /* زيادة العرض */
+            margin: 60px auto; /* زيادة المسافة من الأعلى والأسفل */
+            border-radius: 15px; /* زيادة زوايا التدوير */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* تحسين الظل */
+        }
+
+        .booking h2 {
+            font-size: 2.5em; /* زيادة حجم الخط */
+            color: #f3f3f3;
+            text-align: center;
+            margin-bottom: 30px; /* زيادة المسافة السفلية */
+        }
+
+        .booking form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* زيادة المسافة بين العناصر */
+        }
+
+        .booking label {
+            font-size: 1.2em; /* زيادة حجم الخط */
+            color: #ececec;
+            margin-bottom: 10px; /* زيادة المسافة السفلية */
+            text-align: right; /* محاذاة النص لليمين */
+        }
+
+        .booking input,
+        .booking select,
+        .booking textarea {
+            padding: 12px; /* زيادة المسافات الداخلية */
+            border: 1px solid #0e5232;
+            border-radius: 8px; /* زيادة زوايا التدوير */
+            font-size: 1.1em; /* زيادة حجم الخط */
+            text-align: right; /* محاذاة النص لليمين */
+        }
+
+        .booking input:focus,
+        .booking select:focus,
+        .booking textarea:focus {
+            border-color: #f0f0f0;
+            outline: none;
+        }
+
+        .booking button {
+            background-color: #eef1ef;
+            color: #0e5232;
+            padding: 18px; /* زيادة المسافات الداخلية */
+            border: none;
+            border-radius: 8px; /* زيادة زوايا التدوير */
+            font-size: 1.2em; /* زيادة حجم الخط */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .booking button:hover {
+            background-color: #189b3f;
+        }
+
+        /* الفوتر */
+        footer {
+    background-color: #202523;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 0;
+}
+
+footer .social-links img {
+    height: 30px;
+    margin: 0 10px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img id="myImage" src="شعار 2.png" alt="شعار المنتجع هول ان ون     " onmouseover="readAltText('myImage')" title="انقر على الشعار للعودة الى الصفحة الرئيسيةلموقع منتجع هول ان ون للجولف ">
+        </a>
+        <h1 style="display: flex; justify-content: center; align-items: center; height: 0vh; color: white;">Hole in One Golf Resort </h1>
+    </header>
+    <nav>
+        <!-- زر الهمبرغر -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- قائمة التنقل -->
+        <ul id="navMenu">
+         <li> <a href="احجز الان .html">الحجوزات</a></li>
+            <li><a href="اتصل بنا .html">اتصل بنا </a></li>
+           <li> <a href="المرافق .html"> المرافق</a></li>
+            <li><a href="الحزم .html">الحزم</a></li>
+           <li> <a href="من نحن .html">من نحن؟</a></li>
+           <li> <a href="index.html">الرئيسية</a></li>
+
+            
+        </ul>
+    </nav>
+    <!-- قسم الحجز -->
+    <section class="booking">
+        <h2>حجز منتجع هول إن ون</h2>
+        <form id="bookingForm">
+            <label for="name">:الاسم الكامل</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">:البريدالإلكتروني</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">:رقم الهاتف</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="checkin">:تاريخ الوصول</label>
+            <input type="date" id="checkin" name="checkin" required>
+
+            <label for="checkout">:تاريخ المغادرة</label>
+            <input type="date" id="checkout" name="checkout" required>
+
+            <label for="guests">:عدد الضيوف</label>
+            <select id="guests" name="guests" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5+</option>
+            </select>
+
+            <label for="notes">:ملاحظات إضافية</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+
+            <button type="submit">احجز الآن</button>
+        </form>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025 | شركة Hole in One Golf Resort</p>
+        <div class="social-links">
+            <a href="https://www.whatsapp.com/?lang=ar_AR" target="_blank">
+                <img src="واتس.png" alt="واتساب">
+            </a>
+            <a href="https://web.facebook.com/?locale=ar_AR&_rdc=1&_rdr#" target="_blank">
+                <img src="فيس.png" alt="فيسبوك">
+            </a>
+            
+        </div>
+        <p>التاريخ والوقت الحالي: <span id="dateTime"></span></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // تفاعلية النموذج
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // منع إرسال النموذج
+
+            // جمع بيانات النموذج
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            // عرض رسالة تأكيد
+            alert('تم استلام طلب الحجز بنجاح! سنتصل بك قريبًا لتأكيد التفاصيل.');
+            console.log('بيانات الحجز:', data);
+
+            // إعادة تعيين النموذج
+            this.reset();
+        });
+    </script>
+</body>
+</html>
